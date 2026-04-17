@@ -1,7 +1,7 @@
 {
   "hero": {
-    "title": "Welcome to BetterGov.ph",
-    "subtitle": "The volunteer run portal of the Republic of the Philippines. Find information, access government services, stay updated with the latest news about the Philippines.",
+    "title": "Welcome to BetterMaasin",
+    "subtitle": "The volunteer run portal of the City of Maasin. Find information, access government services, stay updated with the latest news about Maasin.",
     "nationalId": "National ID",
     "birthCertificate": "Birth Certificate",
     "businessRegistration": "Business Registration"
@@ -23,7 +23,7 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "2025 BetterGov.ph - All content is public domain unless otherwise specified."
+    "copyright": "2026 BetterMaasin - MIT | CC BY 4.0 | All content is public domain unless otherwise specified."
   },
   "navbar": {
     "philippines": "Philippines",
