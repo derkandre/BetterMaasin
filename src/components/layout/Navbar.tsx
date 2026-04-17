@@ -210,9 +210,9 @@ const Navbar: FC = () => {
                 className='h-12 w-12 mr-1 md:mr-3'
               />
               <div>
-                <div className='text-black font-bold'>BetterGov.ph</div>
+                <div className='text-black font-bold'>BetterMaasin</div>
                 <div className='text-xs text-gray-800'>
-                  A community-run portal for the Philippines
+                  A community-run portal for Maasin City
                 </div>
               </div>
             </Link>
