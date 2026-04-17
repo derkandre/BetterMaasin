@@ -1332,6 +1332,17 @@
           }
         },
         {
+          "municipality": "Maasin",
+          "zip_code": "6600",
+          "mayor": {
+            "name": "LUZ V. MERCADO",
+            "contact": "(053) 570 8285"
+          },
+          "vice_mayor": {
+            "name": "MA. EFFIE ABIER-SABANDAL"
+          }
+        },
+        {
           "municipality": "Macrohon",
           "zip_code": "6601",
           "mayor": {
