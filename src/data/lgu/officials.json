@@ -1,0 +1,58 @@
+{
+  "executive": {
+    "officials": [
+      {
+        "role": "City Mayor",
+        "name": "Hon. Luz V. Mercado"
+      },
+      {
+        "role": "City Vice Mayor",
+        "name": "Hon. Ma. Effie Abiera-Sabandal"
+      }
+    ]
+  },
+  "legislative": {
+    "officials": [
+      {
+        "role": "SP Member",
+        "name": "Hon. Isagani M. Mercado"
+      },
+      {
+        "role": "SP Member",
+        "name": "Hon. Atty. Jezzene Gail P. Acasio"
+      },
+      {
+        "role": "SP Member",
+        "name": "Hon. Luzviminda T. Rosete"
+      },
+      {
+        "role": "SP Member",
+        "name": "Hon. Mikhael Leonardo V. Mercado"
+      },
+      {
+        "role": "SP Member",
+        "name": "Hon. Atty. Margarita A. Bantug"
+      },
+      {
+        "role": "SP Member",
+        "name": "Hon. Rafael Cromwell T. Gerong"
+      },
+      {
+        "role": "SP Member",
+        "name": "Hon. Eliseo B. Costillas"
+      },
+      {
+        "role": "SP Member",
+        "name": "Hon. Manuel A. Enage V"
+      },
+      {
+        "role": "SP Member",
+        "name": "Hon. Atty. Romeo R. Geniston"
+      },
+      {
+        "role": "SP Member",
+        "name": "Hon. Ty Tenten Duarte"
+      }
+    ]
+  }
+}
