@@ -1,0 +1,123 @@
+[
+  {
+    "category": "Executive Offices",
+    "offices": [
+      {
+        "office": "City Mayor's Office",
+        "head": "Hon. Luz V. Mercado",
+        "contact": "(053) 570-0000",
+        "email": null
+      },
+      {
+        "office": "City Administrator",
+        "head": "Lourse E. Ortega",
+        "contact": "(053) 570-0000",
+        "email": null
+      },
+      {
+        "office": "City Legal Office",
+        "head": "Atty. Brenjune Bliss Gerong-Calapre, JD",
+        "contact": "(053) 570-3202",
+        "email": null
+      }
+    ]
+  },
+  {
+    "category": "Finance & Administration",
+    "offices": [
+      {
+        "office": "City Treasurer",
+        "head": "Elvira A. Mercedes, CPA (Acting)",
+        "contact": "(053) 802-5663",
+        "email": null
+      },
+      {
+        "office": "City Assessor",
+        "head": "Keith M. Adobas, REB",
+        "contact": "(053) 570-9796",
+        "email": null
+      },
+      {
+        "office": "City Accountant",
+        "head": "Cecelle Resos-Binongo, CPA",
+        "contact": "(053) 381-2370",
+        "email": null
+      },
+      {
+        "office": "City Budget Office",
+        "head": "Ethel Grace Barrientos-Seno, CPA",
+        "contact": "(053) 862-0042",
+        "email": null
+      },
+      {
+        "office": "City Human Resource (CHRMDO)",
+        "head": "Raul A. Inocando, Jr., MBA",
+        "contact": "(053) 570-8824",
+        "email": null
+      },
+      {
+        "office": "General Services (GSO)",
+        "head": "Judy C. Arbiol (OIC)",
+        "contact": "(053) 570-8608",
+        "email": null
+      }
+    ]
+  },
+  {
+    "category": "Planning & Economic",
+    "offices": [
+      {
+        "office": "City Planning (CPDO)",
+        "head": "Engr. Marietta R. Ancla, MBA (OIC)",
+        "contact": "(053) 570-3545",
+        "email": null
+      },
+      {
+        "office": "City Tourism Office (CIPTO)",
+        "head": "Atty. Piña Luz C. Abrea",
+        "contact": "(053) 570-8097",
+        "email": null
+      }
+    ]
+  },
+  {
+    "category": "Health & Social",
+    "offices": [
+      {
+        "office": "City Health Office II",
+        "head": "Dr. Jocelyn A. Orito",
+        "contact": "09084512416",
+        "email": null
+      },
+      {
+        "office": "Social Welfare (CSWDO)",
+        "head": "Jhade Maturan-Bestudio, RSW",
+        "contact": "09102267877",
+        "email": null
+      },
+      {
+        "office": "Senior Citizen Affairs (OSCA)",
+        "head": "Salvador Valdez",
+        "contact": "(053) 570-8874",
+        "email": null
+      }
+    ]
+  },
+  {
+    "category": "Public Safety",
+    "offices": [
+      {
+        "office": "City DRRMO",
+        "head": "Raul A. Inocando, Jr., MBA (OIC)",
+        "contact": "09704522222",
+        "email": null
+      },
+      {
+        "office": "Traffic Enforcement (CTEU)",
+        "head": "Engr. Jeremias O. Paler",
+        "contact": "(053) 381-3732",
+        "email": null
+      }
+    ]
+  }
+]

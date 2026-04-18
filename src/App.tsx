@@ -64,8 +64,11 @@ import LocalLayout from './pages/government/local/components/LocalLayout';
 import LocalGovernmentIndex from './pages/government/local/index';
 import RegionalLGUPage from './pages/government/local/[region]';
 
-// City Officials
+// City Government
 import CityOfficialsIndex from './pages/government/city-officials/index';
+import CityDepartmentsLayout from './pages/government/city-departments/layout';
+import CityDepartmentsIndex from './pages/government/city-departments';
+import CityDepartmentsCategory from './pages/government/city-departments/[category]';
 
 // Search Page
 import SearchPage from './pages/Search';
@@ -188,6 +191,13 @@ function App() {
               <Route path='salary-grade' element={<SalaryGradePage />} />
 
               <Route path='city-officials' element={<CityOfficialsIndex />} />
+              <Route
+                path='city-departments'
+                element={<CityDepartmentsLayout />}
+              >
+                <Route index element={<CityDepartmentsIndex />} />
+                <Route path=':category' element={<CityDepartmentsCategory />} />
+              </Route>
 
               <Route path='executive' element={<ExecutiveLayout />}>
                 <Route index element={<ExecutiveDirectory />} />
