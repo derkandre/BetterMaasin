@@ -312,25 +312,39 @@ const Navbar: FC = () => {
         <div className='container mx-auto px-2 pt-2 pb-4 space-y-1 border-t border-gray-200 bg-white'>
           {mainNavigation.map(item => {
             const isActive = isActiveRoute(item.href);
+
             return (
               <div key={item.label}>
-                <button
-                  onClick={() => toggleSubmenu(item.label)}
-                  className={`w-full flex justify-between items-center px-4 py-2 text-base font-medium transition-colors ${
-                    isActive
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-gray-700 hover:bg-gray-50 hover:text-primary-500'
-                  }`}
-                >
-                  {t(`navbar.${item.label.toLowerCase()}`)}
-                  {item.children && (
+                {item.children ? (
+                  <button
+                    onClick={() => toggleSubmenu(item.label)}
+                    className={`w-full flex justify-between items-center px-4 py-2 text-base font-medium transition-colors ${
+                      isActive
+                        ? 'text-primary-600 bg-primary-50'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-primary-500'
+                    }`}
+                  >
+                    <span>{t(`navbar.${item.label.toLowerCase()}`)}</span>
                     <ChevronDownIcon
                       className={`h-5 w-5 transition-transform ${
                         activeMenu === item.label ? 'transform rotate-180' : ''
                       } ${isActive ? 'text-primary-600' : ''}`}
                     />
-                  )}
-                </button>
+                  </button>
+                ) : (
+                  <Link
+                    to={item.href}
+                    onClick={closeMenu}
+                    className={`block w-full px-4 py-2 text-base font-medium transition-colors ${
+                      isActive
+                        ? 'text-primary-600 bg-primary-50'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-primary-500'
+                    }`}
+                  >
+                    {t(`navbar.${item.label.toLowerCase()}`)}
+                  </Link>
+                )}
+
                 {item.children && activeMenu === item.label && (
                   <div className='pl-6 py-2 space-y-1 bg-gray-50'>
                     {item.children.map(child => (
