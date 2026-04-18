@@ -1,14 +1,8 @@
 import { ReactNode } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import {
-  Building2Icon,
-  LandmarkIcon,
-  GalleryVerticalIcon,
-  GlobeIcon,
-  BookOpenIcon,
-  MapPinIcon,
-} from 'lucide-react';
+import { Building2Icon, StarIcon, HouseIcon } from 'lucide-react';
 import { cn } from '../../lib/utils';
+import officialsData from '../../data/lgu/officials.json';
 
 interface GovernmentLayoutProps {
   title: string;
@@ -24,45 +18,24 @@ export default function GovernmentLayout({ children }: GovernmentLayoutProps) {
   // Define branch data
   const branches = [
     {
-      title: 'Executive Branch',
-      description:
-        'The President, Vice President, and the Cabinet members who implement and enforce laws.',
-      icon: <LandmarkIcon className='h-4 w-4' />,
-      path: '/government/executive',
+      title: 'City Officials',
+      description: `Meet the City Mayor, Vice Mayor, and ${officialsData.legislative.officials.length} Sangguniang Panlungsod members serving Maasin City.`,
+      icon: <StarIcon className='h-4 w-4' />,
+      path: '/government/city-officials',
     },
     {
-      title: 'Executive Departments',
+      title: 'City Departments',
       description:
-        'Government departments and agencies responsible for specific areas of governance.',
+        'Browse the city offices and departments that handle public services, programs, and daily administration.',
       icon: <Building2Icon className='h-4 w-4' />,
-      path: '/government/departments',
+      path: '/government/city-departments',
     },
     {
-      title: 'Constitutional Bodies',
+      title: 'The Barangays',
       description:
-        'Independent bodies created by the Constitution with specific mandates.',
-      icon: <BookOpenIcon className='h-4 w-4' />,
-      path: '/government/constitutional',
-    },
-    {
-      title: 'Legislative Branch',
-      description:
-        'The Senate and House of Representatives that make laws and policies.',
-      icon: <GalleryVerticalIcon className='h-4 w-4' />,
-      path: '/government/legislative',
-    },
-    {
-      title: 'Local Government Units',
-      description: 'Local government units of the Philippines.',
-      icon: <MapPinIcon className='h-4 w-4' />,
-      path: '/government/local',
-    },
-    {
-      title: 'Diplomatic Missions',
-      description:
-        'Philippine embassies, consulates, and diplomatic missions around the world.',
-      icon: <GlobeIcon className='h-4 w-4' />,
-      path: '/government/diplomatic',
+        'Explore the barangays of Maasin City and access community-level contact and local information.',
+      icon: <HouseIcon className='h-4 w-4' />,
+      path: '/government/barangays',
     },
   ];
 
@@ -74,11 +47,10 @@ export default function GovernmentLayout({ children }: GovernmentLayoutProps) {
     <div className='container mx-auto px-4 md:px-0'>
       <div className='py-8 md:py-12 text-center flex flex-col justify-center'>
         <h2 className='text-3xl md:text-4xl font-bold text-gray-800 mb-4'>
-          The Philippine Government Directory
+          The Maasin City Government Directory
         </h2>
         <p className='text-sm md:text-base text-gray-800'>
-          Explore the different branches and agencies of the Philippine
-          government
+          Explore local officials, city offices, and barangays in one place.
         </p>
       </div>
 
