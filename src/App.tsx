@@ -64,6 +64,9 @@ import LocalLayout from './pages/government/local/components/LocalLayout';
 import LocalGovernmentIndex from './pages/government/local/index';
 import RegionalLGUPage from './pages/government/local/[region]';
 
+// City Officials
+import CityOfficialsIndex from './pages/government/city-officials/index';
+
 // Search Page
 import SearchPage from './pages/Search';
 
@@ -181,8 +184,10 @@ function App() {
               path='/government'
               element={<GovernmentLayout title='Government' />}
             >
-              <Route index element={<Navigate to='executive' replace />} />
+              <Route index element={<Navigate to='city-officials' replace />} />
               <Route path='salary-grade' element={<SalaryGradePage />} />
+
+              <Route path='city-officials' element={<CityOfficialsIndex />} />
 
               <Route path='executive' element={<ExecutiveLayout />}>
                 <Route index element={<ExecutiveDirectory />} />
