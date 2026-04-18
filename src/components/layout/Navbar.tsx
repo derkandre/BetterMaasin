@@ -206,7 +206,7 @@ const Navbar: FC = () => {
             <Link to='/' className='flex items-center'>
               <img
                 src='/logos/svg/BetterGov_Icon-Primary.svg'
-                alt='BetterGov Logo'
+                alt='BetterMaasin Logo'
                 className='h-12 w-12 mr-1 md:mr-3'
               />
               <div>

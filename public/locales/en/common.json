@@ -26,12 +26,12 @@
     "copyright": "2026 BetterMaasin - MIT | CC BY 4.0 | All content is public domain unless otherwise specified."
   },
   "navbar": {
-    "philippines": "Philippines",
     "services": "Services",
-    "travel": "Travel",
     "government": "Government",
-    "flood control projects": "Flood Control Projects",
-    "our projects": "Our Projects"
+    "statistics": "Statistics",
+    "issuances": "Issuances",
+    "contact": "Contact",
+    "about": "About"
   },
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",
