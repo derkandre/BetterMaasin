@@ -152,35 +152,21 @@ const Navbar: FC = () => {
               to='/join-us'
               className='inline-flex items-center font-semibold text-primary-600 hover:text-primary-700 transition-colors whitespace-nowrap min-[340px]:max-[374px]:order-1'
             >
-              🚀 Join Us
-            </Link>
-            <Link
-              to='https://about.bettergov.ph'
-              target='_blank'
-              className='inline-flex items-center text-gray-800 hover:text-primary-600 transition-colors whitespace-nowrap min-[340px]:max-[374px]:order-2'
-            >
-              About
+              {t('navbar.joinUs')}
             </Link>
             <a
-              href='https://www.gov.ph'
-              className='inline-flex items-center text-gray-800 hover:text-primary-600 transition-colors whitespace-nowrap min-[340px]:max-[374px]:order-3'
+              href='https://www.maasincity.gov.ph'
+              className='inline-flex items-center text-gray-800 hover:text-primary-600 transition-colors whitespace-nowrap min-[340px]:max-[374px]:order-2'
               target='_blank'
               rel='noreferrer'
             >
-              Official Gov.ph
+              {t('navbar.officialGovPh')}
             </a>
-            <span className='hidden min-[340px]:max-[374px]:block min-[340px]:max-[374px]:basis-full min-[340px]:max-[374px]:order-4' />
-            <Link
-              to='/contact'
-              className='inline-flex items-center text-gray-800 hover:text-primary-600 transition-colors whitespace-nowrap min-[340px]:max-[374px]:order-5'
-            >
-              Contact Us
-            </Link>
             <Link
               to='/philippines/hotlines'
-              className='inline-flex items-center text-gray-800 hover:text-primary-600 transition-colors whitespace-nowrap min-[340px]:max-[374px]:order-6'
+              className='inline-flex items-center text-red-800 hover:text-primary-600 transition-colors whitespace-nowrap min-[340px]:max-[374px]:order-4'
             >
-              Hotlines
+              {t('navbar.emergencyHotlines')}
             </Link>
             <div className='hidden md:block'>
               <select
