@@ -10,7 +10,7 @@ import { fetchForexData, getCurrencyIconName } from '../../lib/forex';
 import { fetchWeatherData } from '../../lib/weather';
 import { ForexRate, WeatherData } from '../../types';
 import { useLocation } from 'react-router-dom';
-import { Calendar, Clock3 } from 'lucide-react';
+import { Calendar, Clock3, CalendarClock } from 'lucide-react';
 
 const getCurrencyIcon = (code: string) => {
   const iconName = getCurrencyIconName(code);
@@ -203,8 +203,8 @@ const Ticker: FC = () => {
 
           {/* DateTime display */}
           <div className='inline-flex items-center space-x-2 border-l border-accent-500 pl-4'>
-            <Calendar className='h-3.5 w-3.5 mb-0.5' />
-            <span className='text-xs text-accent-100'>
+            <Calendar className='h-3.5 w-3.5 mb-0.5 hidden sm:inline' />
+            <span className='text-xs text-accent-100 hidden sm:inline'>
               {now.toLocaleDateString(undefined, {
                 weekday: 'short',
                 month: 'short',
@@ -212,8 +212,8 @@ const Ticker: FC = () => {
                 year: 'numeric',
               })}{' '}
             </span>
-            <Clock3 className='h-3.5 w-3.5 mb-0.5 ml-2' />
-            <span className='text-xs text-accent-100'>
+            <Clock3 className='h-3.5 w-3.5 mb-0.5 ml-2 hidden sm:inline' />
+            <span className='text-xs text-accent-100 hidden sm:inline'>
               <a href='https://oras.pagasa.dost.gov.ph/'>
                 {now.toLocaleTimeString([], {
                   hour: '2-digit',
@@ -221,7 +221,16 @@ const Ticker: FC = () => {
                 })}
               </a>
             </span>
-            <span className='text-[11px] text-accent-100'>PHT</span>
+            <span className='text-[11px] text-accent-100 hidden sm:inline'>
+              <a href='https://oras.pagasa.dost.gov.ph/'>PHT</a>
+            </span>
+
+            <CalendarClock className='h-3.5 w-3.5 mb-0.5 inline sm:hidden' />
+            <span className='text-xs text-accent-100 inline sm:hidden'>
+              <a href='https://oras.pagasa.dost.gov.ph/'>
+                {`${now.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}, ${now.getFullYear().toString().slice(-2)} • ${now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
+              </a>
+            </span>
           </div>
         </div>
       </div>
