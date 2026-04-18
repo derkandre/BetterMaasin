@@ -10,6 +10,7 @@ import { fetchForexData, getCurrencyIconName } from '../../lib/forex';
 import { fetchWeatherData } from '../../lib/weather';
 import { ForexRate, WeatherData } from '../../types';
 import { useLocation } from 'react-router-dom';
+import { Calendar, Clock3, CalendarClock } from 'lucide-react';
 
 const getCurrencyIcon = (code: string) => {
   const iconName = getCurrencyIconName(code);
@@ -36,6 +37,7 @@ const Ticker: FC = () => {
   const [weatherLoading, setWeatherLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [weatherError, setWeatherError] = useState<string | null>(null);
+  const [now, setNow] = useState<Date>(new Date());
   const { pathname } = useLocation();
 
   // Fetch forex data
@@ -108,6 +110,12 @@ const Ticker: FC = () => {
     return () => clearInterval(interval);
   }, [forexRates.length]);
 
+  // Update clock every second
+  useEffect(() => {
+    const timer = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   // If loading or error, show appropriate content
   if (isLoading && weatherLoading) {
     return (
@@ -162,7 +170,7 @@ const Ticker: FC = () => {
           </div>
 
           {/* Weather information */}
-          <div className='flex items-center space-x-6 pl-4 border-l border-accent-500'>
+          <div className='flex items-center space-x-6 pl-4 pr-4 border-l border-accent-500'>
             {weatherLoading ? (
               <div className='flex items-center space-x-2'>
                 <LoaderIcon className='h-3 w-3 animate-spin text-accent-100' />
@@ -191,6 +199,38 @@ const Ticker: FC = () => {
                 </div>
               ))
             )}
+          </div>
+
+          {/* DateTime display */}
+          <div className='inline-flex items-center space-x-2 border-l border-accent-500 pl-4'>
+            <Calendar className='h-3.5 w-3.5 mb-0.5 hidden sm:inline' />
+            <span className='text-xs text-accent-100 hidden sm:inline'>
+              {now.toLocaleDateString(undefined, {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+              })}{' '}
+            </span>
+            <Clock3 className='h-3.5 w-3.5 mb-0.5 ml-2 hidden sm:inline' />
+            <span className='text-xs text-accent-100 hidden sm:inline'>
+              <a href='https://oras.pagasa.dost.gov.ph/'>
+                {now.toLocaleTimeString([], {
+                  hour: '2-digit',
+                  minute: '2-digit',
+                })}
+              </a>
+            </span>
+            <span className='text-[11px] text-accent-100 hidden sm:inline'>
+              <a href='https://oras.pagasa.dost.gov.ph/'>PHT</a>
+            </span>
+
+            <CalendarClock className='h-3.5 w-3.5 mb-0.5 inline sm:hidden' />
+            <span className='text-xs text-accent-100 inline sm:hidden'>
+              <a href='https://oras.pagasa.dost.gov.ph/'>
+                {`${now.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}, ${now.getFullYear().toString().slice(-2)} • ${now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
+              </a>
+            </span>
           </div>
         </div>
       </div>
