@@ -8,7 +8,7 @@
   },
   "services": {
     "title": "Popular Services",
-    "governmentServices": "Government Services",
+    "governmentServices": "Local Government Services",
     "description": "Access official government services quickly and easily. Find what you need for citizenship, business, education, and more.",
     "viewAll": "View All Services",
     "viewAllCategory": "View All"
@@ -47,15 +47,13 @@
     "features": "Community-driven • Open source • Built for Maasinhons"
   },
   "data": {
-    "title": "Real-Time Data Services",
-    "description": "Access up-to-date information on weather conditions and foreign exchange rates across the Philippines.",
+    "title": "Real-Time Data at Your Fingertips",
+    "description": "Access up-to-date information on Maasin's weather conditions and the currency foreign exchange rates.",
     "weatherForecast": "Weather Forecast",
     "realtimeConditions": "Real-time conditions",
     "viewArrow": "View →",
     "weatherDescription": "Get current weather conditions and forecasts for major cities across the Philippines. Plan your day with accurate temperature readings and weather alerts.",
-    "manila": "Manila",
-    "cebu": "Cebu",
-    "davao": "Davao",
+    "maasin": "Maasin",
     "moreCities": "More Cities",
     "forexRates": "Forex Rates",
     "liveExchange": "Live exchange rates",

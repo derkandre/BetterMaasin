@@ -206,10 +206,16 @@ export async function onRequest(context: {
         );
       }
 
-      // Return the fresh data
+      // Return the fresh data. When a specific city is requested, return an
+      // object keyed by the city name for a consistent response shape.
       return new Response(
         JSON.stringify(
-          cityParam ? weatherData[cityParam.toLowerCase()] || {} : weatherData
+          cityParam
+            ? {
+                [cityParam.toLowerCase()]:
+                  weatherData[cityParam.toLowerCase()] || {},
+              }
+            : weatherData
         ),
         {
           headers: {
@@ -288,10 +294,16 @@ export async function onRequest(context: {
       );
     }
 
-    // Return the response
+    // Return the response. Keep response shape consistent for specific city
+    // requests by returning an object keyed by the city name.
     return new Response(
       JSON.stringify(
-        cityParam ? weatherData[cityParam.toLowerCase()] || {} : weatherData
+        cityParam
+          ? {
+              [cityParam.toLowerCase()]:
+                weatherData[cityParam.toLowerCase()] || {},
+            }
+          : weatherData
       ),
       {
         headers: {

@@ -3,7 +3,6 @@ import * as LucideIcons from 'lucide-react';
 import { Card, CardHeader, CardContent } from '../ui/Card';
 import { WeatherData, ForexRate } from '../../types';
 import { useTranslation } from 'react-i18next';
-import CriticalHotlinesWidget from '../widgets/CriticalHotlinesWidget';
 import { fetchWeatherData } from '../../lib/weather';
 import { fetchForexData } from '../../lib/forex';
 
@@ -87,7 +86,7 @@ const InfoWidgets: FC = () => {
             {t('data.description')}
           </p>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           {/* Weather Widget */}
           <Card>
             <CardHeader className='bg-primary-50'>
@@ -232,11 +231,6 @@ const InfoWidgets: FC = () => {
               </div>
             </CardContent>
           </Card>
-
-          {/* Emergency Hotlines Widget */}
-          <div className='lg:col-span-1'>
-            <CriticalHotlinesWidget maxItems={4} />
-          </div>
         </div>
       </div>
     </section>
