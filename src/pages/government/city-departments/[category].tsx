@@ -15,7 +15,7 @@ import {
   HeartPulseIcon,
   HandHeartIcon,
   ShieldAlertIcon,
-  OctagonXIcon,
+  TrafficConeIcon,
   ScaleIcon,
   PersonStandingIcon,
   Wallet2Icon,
@@ -91,7 +91,7 @@ export default function CityDepartmentsCategory() {
     'senior-citizen-affairs-osca': PersonStandingIcon,
 
     'city-drrmo': ShieldAlertIcon,
-    'traffic-enforcement-cteu': OctagonXIcon,
+    'traffic-enforcement-cteu': TrafficConeIcon,
   };
 
   return (
