@@ -22,7 +22,7 @@ import PhilippinesRegions from './pages/philippines/regions';
 import PhilippinesMap from './pages/philippines/map';
 import PublicHolidays from './pages/philippines/holidays';
 import ContactUs from './pages/ContactUs';
-import Hotlines from './pages/philippines/Hotlines';
+import Hotlines from './pages/maasin/Hotlines';
 import VisaPage from './pages/travel/visa';
 import VisaTypesPage from './pages/travel/visa-types';
 import VisaTypeDetail from './pages/travel/visa-types/[type]';
