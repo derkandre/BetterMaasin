@@ -3,7 +3,24 @@ import {
   MailIcon,
   PhoneIcon,
   ExternalLinkIcon,
+  LandmarkIcon,
+  ClipboardPenLineIcon,
+  ShieldBanIcon,
+  HeartIcon,
+  BoltIcon,
+  UsersIcon,
+  CalculatorIcon,
+  PhilippinePesoIcon,
+  BinocularsIcon,
+  HeartPulseIcon,
+  HandHeartIcon,
+  ShieldAlertIcon,
+  OctagonXIcon,
+  ScaleIcon,
+  PersonStandingIcon,
+  Wallet2Icon,
 } from 'lucide-react';
+import type { ComponentType, SVGProps } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   Card,
@@ -31,6 +48,52 @@ export default function CityDepartmentsCategory() {
     );
   }
 
+  const categoryIconMap = {
+    'executive-offices': Building2Icon,
+    'finance-administration': LandmarkIcon,
+    'planning-economic': ClipboardPenLineIcon,
+    'public-safety': ShieldBanIcon,
+    'health-social': HeartIcon,
+  };
+
+  const toSlug = (value: string) =>
+    value
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+
+  const categoryIcon =
+    categoryIconMap[categoryData.slug as keyof typeof categoryIconMap] ??
+    Building2Icon;
+
+  const officeIconMap: Record<
+    string,
+    ComponentType<SVGProps<SVGSVGElement>>
+  > = {
+    'city-mayors-office': Building2Icon,
+    'city-administrator': Building2Icon,
+    'city-legal-office': ScaleIcon,
+
+    'city-treasurer': LandmarkIcon,
+    'city-assessor': PhilippinePesoIcon,
+    'city-accountant': CalculatorIcon,
+    'city-budget-office': Wallet2Icon,
+    'city-human-resource-chrmdo': UsersIcon,
+    'general-services-gso': BoltIcon,
+
+    'city-planning-cpdo': ClipboardPenLineIcon,
+    'city-tourism-office-cipto': BinocularsIcon,
+
+    'city-health-officer': HeartPulseIcon,
+    'social-welfare-cswdo': HandHeartIcon,
+    'senior-citizen-affairs-osca': PersonStandingIcon,
+
+    'city-drrmo': ShieldAlertIcon,
+    'traffic-enforcement-cteu': OctagonXIcon,
+  };
+
   return (
     <div className='space-y-6 @container'>
       <div>
@@ -43,54 +106,60 @@ export default function CityDepartmentsCategory() {
       </div>
 
       <div className='grid grid-cols-1 @lg:grid-cols-2 @3xl:grid-cols-3 gap-6'>
-        {categoryData.offices.map(office => (
-          <Card
-            key={office.office}
-            hover={false}
-            className='h-full flex flex-col'
-          >
-            <CardHeader className='flex-none min-h-[110px]'>
-              <div className='flex items-start justify-between gap-3 h-full'>
-                <div className='flex-1'>
-                  <h2 className='font-semibold text-base text-gray-900 leading-tight'>
-                    {office.office}
-                  </h2>
-                  <p className='text-sm text-primary-600 font-medium mt-1'>
-                    {office.head}
-                  </p>
-                </div>
-                <div className='rounded-full bg-gray-100 p-2 shrink-0'>
-                  <Building2Icon className='h-5 w-5 text-gray-600' />
-                </div>
-              </div>
-            </CardHeader>
+        {categoryData.offices.map(office => {
+          const officeSlug = toSlug(office.office);
+          const Icon =
+            officeIconMap[officeSlug] ?? categoryIcon ?? Building2Icon;
 
-            <CardDivider />
-
-            <CardContent className='flex-1 space-y-3'>
-              {office.contact ? (
-                <div className='flex items-start gap-2 text-sm'>
-                  <PhoneIcon className='h-4 w-4 text-gray-400 flex-shrink-0 mt-0.5' />
-                  <span className='text-gray-700'>{office.contact}</span>
+          return (
+            <Card
+              key={office.office}
+              hover={false}
+              className='h-full flex flex-col'
+            >
+              <CardHeader className='flex-none min-h-[110px]'>
+                <div className='flex items-start justify-between gap-3 h-full'>
+                  <div className='flex-1'>
+                    <h2 className='font-semibold text-base text-gray-900 leading-tight'>
+                      {office.office}
+                    </h2>
+                    <p className='text-sm text-primary-600 font-medium mt-1'>
+                      {office.head}
+                    </p>
+                  </div>
+                  <div className='rounded-full bg-gray-100 p-2 shrink-0'>
+                    <Icon className='h-5 w-5 text-gray-600' />
+                  </div>
                 </div>
-              ) : (
-                <span className='text-sm text-gray-400 italic'>
-                  No contact available
-                </span>
-              )}
+              </CardHeader>
 
-              {office.email ? (
-                <a
-                  href={`mailto:${office.email}`}
-                  className='flex items-start gap-2 text-sm text-primary-600 hover:underline'
-                >
-                  <MailIcon className='h-4 w-4 text-gray-400 flex-shrink-0 mt-0.5' />
-                  <span className='break-all'>{office.email}</span>
-                </a>
-              ) : null}
-            </CardContent>
-          </Card>
-        ))}
+              <CardDivider />
+
+              <CardContent className='flex-1 space-y-3'>
+                {office.contact ? (
+                  <div className='flex items-start gap-2 text-sm'>
+                    <PhoneIcon className='h-4 w-4 text-gray-400 flex-shrink-0 mt-0.5' />
+                    <span className='text-gray-700'>{office.contact}</span>
+                  </div>
+                ) : (
+                  <span className='text-sm text-gray-400 italic'>
+                    No contact available
+                  </span>
+                )}
+
+                {office.email ? (
+                  <a
+                    href={`mailto:${office.email}`}
+                    className='flex items-start gap-2 text-sm text-primary-600 hover:underline'
+                  >
+                    <MailIcon className='h-4 w-4 text-gray-400 flex-shrink-0 mt-0.5' />
+                    <span className='break-all'>{office.email}</span>
+                  </a>
+                ) : null}
+              </CardContent>
+            </Card>
+          );
+        })}
       </div>
 
       {/* Data Source Card */}
