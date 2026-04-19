@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Maasin City Barangays",
+  "description": "List of barangays in Maasin City with local officials and contact information",
+  "type": "object",
+  "required": ["barangays"],
+  "properties": {
+    "barangays": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "barangay_captain", "fiesta", "contact_numbers"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the barangay"
+          },
+          "barangay_captain": {
+            "type": "string",
+            "description": "Name of the barangay captain"
+          },
+          "fiesta": {
+            "type": "string",
+            "description": "Annual fiesta date or celebration"
+          },
+          "contact_numbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Contact phone numbers for the barangay office"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

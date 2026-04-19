@@ -1,0 +1,424 @@
+{
+  "barangays": [
+    {
+      "name": "Abgao",
+      "barangay_captain": "Daryl M. Costillas",
+      "fiesta": "Last Saturday of April",
+      "contact_numbers": ["570-8644", "0961-886-6394"]
+    },
+    {
+      "name": "Acasia",
+      "barangay_captain": "Ronel S. Reyes",
+      "fiesta": "Third Saturday of April",
+      "contact_numbers": ["09706880368"]
+    },
+    {
+      "name": "Asuncion",
+      "barangay_captain": "Raeden Mark C. Serdan",
+      "fiesta": "Last Saturday of November",
+      "contact_numbers": ["570-9282", "09317426318"]
+    },
+    {
+      "name": "Bactul I",
+      "barangay_captain": "Severino D. Dolorito",
+      "fiesta": "April 6",
+      "contact_numbers": ["0908-476-6272"]
+    },
+    {
+      "name": "Bactul II",
+      "barangay_captain": "Maria Alma T. Alvero",
+      "fiesta": "April 5",
+      "contact_numbers": ["0948-215-8910"]
+    },
+    {
+      "name": "Badiang",
+      "barangay_captain": "Andy A. Lagusad",
+      "fiesta": "June 29",
+      "contact_numbers": ["0992-825-2889"]
+    },
+    {
+      "name": "Bagtican",
+      "barangay_captain": "Bonifacio P. Sufino, Sr.",
+      "fiesta": "September 29",
+      "contact_numbers": ["0931-969-9839"]
+    },
+    {
+      "name": "Basak",
+      "barangay_captain": "Domingo C. Gregana",
+      "fiesta": "May 14",
+      "contact_numbers": ["09306682327"]
+    },
+    {
+      "name": "Bato I",
+      "barangay_captain": "Immaculada B. Garde",
+      "fiesta": "December 27",
+      "contact_numbers": ["09306964287"]
+    },
+    {
+      "name": "Bato II",
+      "barangay_captain": "Leonarda F. Salapi",
+      "fiesta": "December 8",
+      "contact_numbers": ["09122385810"]
+    },
+    {
+      "name": "Batuan",
+      "barangay_captain": "Bernardino Segovia",
+      "fiesta": "Third Saturday of May",
+      "contact_numbers": ["0970-564-1815"]
+    },
+    {
+      "name": "Baugo",
+      "barangay_captain": "Ricardo S. Morcen",
+      "fiesta": "February 11",
+      "contact_numbers": ["0926-922-8094"]
+    },
+    {
+      "name": "Bilibol",
+      "barangay_captain": "Leonila S. Bandibas",
+      "fiesta": "May 7",
+      "contact_numbers": ["09924835588"]
+    },
+    {
+      "name": "Bogo",
+      "barangay_captain": "Reynaldo M. Paloma",
+      "fiesta": "January 8 / December 27",
+      "contact_numbers": ["0955-427-4295"]
+    },
+    {
+      "name": "Cabadiangan",
+      "barangay_captain": "Ramonito M. Bacala",
+      "fiesta": "May 17",
+      "contact_numbers": ["09099442881"]
+    },
+    {
+      "name": "Cabulihan",
+      "barangay_captain": "Fernando E. Labado",
+      "fiesta": "June 24",
+      "contact_numbers": ["09120569613"]
+    },
+    {
+      "name": "Cagnituan",
+      "barangay_captain": "Jessie Tidalgo Abiñon",
+      "fiesta": "June 24",
+      "contact_numbers": ["0909-693-7353"]
+    },
+    {
+      "name": "Cambooc",
+      "barangay_captain": "Normita P. Siega",
+      "fiesta": "December 12",
+      "contact_numbers": ["0928-543-5030"]
+    },
+    {
+      "name": "Cansirong",
+      "barangay_captain": "Manuel C. Bere",
+      "fiesta": "Last Saturday of April",
+      "contact_numbers": ["09501493509"]
+    },
+    {
+      "name": "Canturing",
+      "barangay_captain": "Abegail A. Cerro",
+      "fiesta": "June 16",
+      "contact_numbers": ["0905-872-3814"]
+    },
+    {
+      "name": "Canyu-om",
+      "barangay_captain": "Melinda A. Lacerna",
+      "fiesta": "May 24",
+      "contact_numbers": ["0928-543-4090"]
+    },
+    {
+      "name": "Combado",
+      "barangay_captain": "Rodley R. Galeon",
+      "fiesta": "May 12",
+      "contact_numbers": ["381-9340", "0926-363-8986"]
+    },
+    {
+      "name": "Dongon",
+      "barangay_captain": "Joel M. Paler",
+      "fiesta": "May 15",
+      "contact_numbers": ["09708369394"]
+    },
+    {
+      "name": "Gawisan",
+      "barangay_captain": "Praxedes B. Dumalagan",
+      "fiesta": "May 23",
+      "contact_numbers": ["09186449671"]
+    },
+    {
+      "name": "Guadalupe",
+      "barangay_captain": "Ruben A. Rollon",
+      "fiesta": "December 12",
+      "contact_numbers": ["0951-367-8398"]
+    },
+    {
+      "name": "Hanginan",
+      "barangay_captain": "Raulito I. Alberca",
+      "fiesta": "June 13",
+      "contact_numbers": ["09357522347"]
+    },
+    {
+      "name": "Hantag",
+      "barangay_captain": "Brenda F. Cabrera",
+      "fiesta": "August 28",
+      "contact_numbers": ["09925009288"]
+    },
+    {
+      "name": "Hinapu Daku",
+      "barangay_captain": "Enrique T. Bersabal, II",
+      "fiesta": "Last Saturday of April",
+      "contact_numbers": ["0920-777-9002"]
+    },
+    {
+      "name": "Hinapu Gamay",
+      "barangay_captain": "Nicomedes C. Hinunangan",
+      "fiesta": "May 25",
+      "contact_numbers": ["0992-709-3760"]
+    },
+    {
+      "name": "Ibarra",
+      "barangay_captain": "Dennis A. Sulla",
+      "fiesta": "Third Saturday of April",
+      "contact_numbers": ["09163240253"]
+    },
+    {
+      "name": "Isagani",
+      "barangay_captain": "Aurelio B. Bandibas Jr.",
+      "fiesta": "June 29",
+      "contact_numbers": ["0926-291-9693"]
+    },
+    {
+      "name": "Laboon",
+      "barangay_captain": "Tito E. Saludo",
+      "fiesta": "January 15",
+      "contact_numbers": ["0912-927-8416"]
+    },
+    {
+      "name": "Lanao",
+      "barangay_captain": "Alando C. Ocat",
+      "fiesta": "January 15",
+      "contact_numbers": ["0997-665-8630"]
+    },
+    {
+      "name": "Libertad",
+      "barangay_captain": "Ariel A. Rojas",
+      "fiesta": "May 10",
+      "contact_numbers": ["09948869706"]
+    },
+    {
+      "name": "Libhu",
+      "barangay_captain": "Mila S. Fabular",
+      "fiesta": "January 15",
+      "contact_numbers": ["09100292573"]
+    },
+    {
+      "name": "Lib-og",
+      "barangay_captain": "Alberto B. Rita Jr.",
+      "fiesta": "May 15",
+      "contact_numbers": ["0994-432-1047"]
+    },
+    {
+      "name": "Lonoy",
+      "barangay_captain": "Celestino B. Laraga Jr.",
+      "fiesta": "May 3",
+      "contact_numbers": ["09307699840"]
+    },
+    {
+      "name": "Lunas",
+      "barangay_captain": "Epifania F. Basa",
+      "fiesta": "October 11",
+      "contact_numbers": ["09503892393"]
+    },
+    {
+      "name": "Mahayahay",
+      "barangay_captain": "Panicrasio M. Epiz",
+      "fiesta": "January 15",
+      "contact_numbers": ["0994-412-8021"]
+    },
+    {
+      "name": "Malapoc Norte",
+      "barangay_captain": "Donato C. Acasio",
+      "fiesta": "June 6",
+      "contact_numbers": ["09653605031"]
+    },
+    {
+      "name": "Malapoc Sur",
+      "barangay_captain": "Eleuterio B. Acasio",
+      "fiesta": "January 15",
+      "contact_numbers": ["09263067484"]
+    },
+    {
+      "name": "Mambajao",
+      "barangay_captain": "Bernard N. Gaviola",
+      "fiesta": "May 15",
+      "contact_numbers": ["0966-412-0972"]
+    },
+    {
+      "name": "Manhilo",
+      "barangay_captain": "Angelita A. Soliva",
+      "fiesta": "January 15",
+      "contact_numbers": ["09368243296"]
+    },
+    {
+      "name": "Mantahan",
+      "barangay_captain": "Alfredo C. Sumabat",
+      "fiesta": "May 19",
+      "contact_numbers": ["0945-559-4536"]
+    },
+    {
+      "name": "Maria Clara",
+      "barangay_captain": "Ramil C. Tolibas",
+      "fiesta": "May 15",
+      "contact_numbers": ["09262350548"]
+    },
+    {
+      "name": "Matin-ao",
+      "barangay_captain": "Rodrigo S. Espere",
+      "fiesta": "December 12",
+      "contact_numbers": ["0946-150-4155"]
+    },
+    {
+      "name": "Nasaug",
+      "barangay_captain": "Cesar S. Costillas Sr.",
+      "fiesta": "Last Saturday of January",
+      "contact_numbers": ["0936-775-8092"]
+    },
+    {
+      "name": "Nati",
+      "barangay_captain": "Tirso L. Mendoza",
+      "fiesta": "May 29",
+      "contact_numbers": ["0920-699-0276"]
+    },
+    {
+      "name": "Nonok Norte",
+      "barangay_captain": "Jesson G. Maturan",
+      "fiesta": "May 15",
+      "contact_numbers": ["09196874414"]
+    },
+    {
+      "name": "Nonok Sur",
+      "barangay_captain": "Isidro L. Adobas",
+      "fiesta": "June 29",
+      "contact_numbers": ["0965-157-0117"]
+    },
+    {
+      "name": "Panan-awan",
+      "barangay_captain": "Sergio L. Macalinao",
+      "fiesta": "May 15",
+      "contact_numbers": ["09951827346"]
+    },
+    {
+      "name": "Pansaan",
+      "barangay_captain": "Jerry Boy V. Esaga",
+      "fiesta": "April 5 / May 26",
+      "contact_numbers": ["09383834374"]
+    },
+    {
+      "name": "Pasay",
+      "barangay_captain": "Calixto O. Malazarte",
+      "fiesta": "May 15",
+      "contact_numbers": ["0975-496-2313"]
+    },
+    {
+      "name": "Pinaskohan",
+      "barangay_captain": "Rubeline E. Escaño",
+      "fiesta": "Last Saturday of August",
+      "contact_numbers": ["0909-349-4168", "0970-056-3889"]
+    },
+    {
+      "name": "Rizal",
+      "barangay_captain": "Jay S. Indiano",
+      "fiesta": "December 27",
+      "contact_numbers": ["0935-661-7231"]
+    },
+    {
+      "name": "San Agustin",
+      "barangay_captain": "Frederick C. Mejares",
+      "fiesta": "Last Saturday of August",
+      "contact_numbers": ["09152664316"]
+    },
+    {
+      "name": "San Isidro",
+      "barangay_captain": "Oncelito P. Calacat",
+      "fiesta": "May 28",
+      "contact_numbers": ["09350133147"]
+    },
+    {
+      "name": "San Jose",
+      "barangay_captain": "Jay S. Guinoo",
+      "fiesta": "May 27",
+      "contact_numbers": ["09925319593"]
+    },
+    {
+      "name": "San Rafael",
+      "barangay_captain": "Danilio S. Dueñas",
+      "fiesta": "October 24",
+      "contact_numbers": ["0935-134-4439"]
+    },
+    {
+      "name": "Santa Cruz",
+      "barangay_captain": "Rogelio A. Dayola",
+      "fiesta": "May 3",
+      "contact_numbers": ["0992-295-4486"]
+    },
+    {
+      "name": "Santa Rosa",
+      "barangay_captain": "Richard M. Bandibas",
+      "fiesta": "May 20",
+      "contact_numbers": ["09755856209"]
+    },
+    {
+      "name": "Santo Niño",
+      "barangay_captain": "Ariel A. Jovita",
+      "fiesta": "Third Saturday of April",
+      "contact_numbers": ["09682161424"]
+    },
+    {
+      "name": "Santo Rosario",
+      "barangay_captain": "Ernesto K. Alinabon",
+      "fiesta": "October 7",
+      "contact_numbers": ["0935-378-9832"]
+    },
+    {
+      "name": "Soro-Soro",
+      "barangay_captain": "Sammy E. Magalines",
+      "fiesta": "April 5",
+      "contact_numbers": ["09758582738"]
+    },
+    {
+      "name": "Tagnipa",
+      "barangay_captain": "Martha S. Saludo",
+      "fiesta": "May 3",
+      "contact_numbers": ["09261003320"]
+    },
+    {
+      "name": "Tam-is",
+      "barangay_captain": "Romeo P. Caberte",
+      "fiesta": "April 20",
+      "contact_numbers": ["0965-625-5219"]
+    },
+    {
+      "name": "Tawid",
+      "barangay_captain": "Galdys V. Mantilla",
+      "fiesta": "May 15",
+      "contact_numbers": ["0992-467-3394"]
+    },
+    {
+      "name": "Tigbawan",
+      "barangay_captain": "Cresente C. Sepra Sr.",
+      "fiesta": "May 30",
+      "contact_numbers": ["09123075122"]
+    },
+    {
+      "name": "Tomoy-Tomoy",
+      "barangay_captain": "Elmer P. Siano",
+      "fiesta": "Third Saturday of January",
+      "contact_numbers": ["0946-434-3697"]
+    },
+    {
+      "name": "Tunga-Tunga",
+      "barangay_captain": "Rizalina S. Araña",
+      "fiesta": "August 29",
+      "contact_numbers": ["0927-885-0067"]
+    }
+  ]
+}
