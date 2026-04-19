@@ -1,9 +1,23 @@
-import { Building2Icon } from 'lucide-react';
+import {
+  Building2Icon,
+  ShieldBanIcon,
+  LandmarkIcon,
+  HeartIcon,
+  ClipboardPenLineIcon,
+} from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import StandardSidebar from '../../../../components/ui/StandardSidebar';
 import { cityDepartments } from '../data';
 
 export default function CityDepartmentsSidebar() {
+  const categoryIconMap = {
+    'executive-offices': Building2Icon,
+    'finance-administration': LandmarkIcon,
+    'planning-economic': ClipboardPenLineIcon,
+    'public-safety': ShieldBanIcon,
+    'health-social': HeartIcon,
+  };
+
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -19,6 +33,10 @@ export default function CityDepartmentsSidebar() {
           {cityDepartments.map(item => {
             const path = `/government/city-departments/${encodeURIComponent(item.slug)}`;
 
+            const Icon =
+              categoryIconMap[item.slug as keyof typeof categoryIconMap] ??
+              Building2Icon;
+
             return (
               <li key={item.slug}>
                 <Link
@@ -31,7 +49,7 @@ export default function CityDepartmentsSidebar() {
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
-                  <Building2Icon className='h-4 w-4 mr-2 text-gray-400 flex-shrink-0' />
+                  <Icon className='h-4 w-4 mr-2 text-gray-400 flex-shrink-0' />
                   <span>{item.category}</span>
                 </Link>
               </li>
