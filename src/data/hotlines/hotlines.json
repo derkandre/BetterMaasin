@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/hotlines/hotlines.schema.json",
+  "emergencyHotlines": [
+    {
+      "name": "National Emergency Hotline",
+      "category": "Emergency",
+      "numbers": ["911"],
+      "description": "Primary national contact for all life-threatening emergencies."
+    },
+    {
+      "name": "Philippine Red Cross - Maasin",
+      "category": "Emergency",
+      "numbers": ["0975-014-9544"],
+      "description": "Blood services, disaster management, and emergency medical assistance."
+    },
+    {
+      "name": "SOYMPH - ER",
+      "category": "Emergency",
+      "numbers": ["0992-459-8559"],
+      "description": "Salvacion Oppus Yñiguez Memorial Provincial Hospital Emergency Room."
+    }
+  ],
+  "disasterHotlines": [
+    {
+      "name": "CDRRMO Maasin City",
+      "category": "Disaster",
+      "numbers": ["0970-452-2222"],
+      "description": "City Disaster Risk Reduction and Management Office for localized emergency response."
+    },
+    {
+      "name": "PDRRMO Southern Leyte",
+      "category": "Disaster",
+      "numbers": ["0985-026-9426"],
+      "description": "Provincial Disaster Risk Reduction and Management Office for province-wide coordination."
+    },
+    {
+      "name": "Bureau of Fire Protection (BFP) - Maasin",
+      "category": "Disaster",
+      "numbers": ["0907-598-9255", "0936-824-5704"],
+      "description": "Fire suppression and emergency rescue services."
+    }
+  ],
+  "securityHotlines": [
+    {
+      "name": "Philippine National Police (PNP) - Maasin",
+      "category": "Security",
+      "numbers": ["0995-061-1081", "0998-598-6527", "0998-598-6528"],
+      "description": "Local police station for law enforcement and public safety concerns."
+    },
+    {
+      "name": "Philippine Coast Guard - Maasin",
+      "category": "Security",
+      "numbers": ["0915-585-8807"],
+      "description": "Maritime safety, security, and search and rescue operations."
+    }
+  ],
+  "transportHotlines": [
+    {
+      "name": "Land Transportation Office (LTO) - Maasin",
+      "category": "Transport",
+      "numbers": ["(053) 570-8056", "09385003058", "0926-523-5956"],
+      "description": "Vehicle registration, driver licensing, and traffic management inquiries."
+    }
+  ],
+  "weatherHotlines": [],
+  "utilityHotlines": [
+    {
+      "name": "Maasin Water District (Prime Water)",
+      "category": "Utility",
+      "numbers": ["0998-590-3379"],
+      "description": "Customer service and emergency water supply issues."
+    },
+    {
+      "name": "Southern Leyte Electric Cooperative (SOLECO)",
+      "category": "Utility",
+      "numbers": ["381-1433", "0908-591-2345"],
+      "description": "Report power outages, electrical hazards, and emergency repairs; handles meter and service inquiries."
+    }
+  ],
+  "socialServicesHotlines": []
+}
