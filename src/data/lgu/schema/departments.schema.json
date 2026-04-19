@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Maasin City Departments",
+  "description": "Organization and contact information for city government departments",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["category", "offices"],
+    "properties": {
+      "category": {
+        "type": "string",
+        "description": "Department category or grouping"
+      },
+      "offices": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["office", "head", "contact", "email"],
+          "properties": {
+            "office": {
+              "type": "string",
+              "description": "Name of the office or department"
+            },
+            "head": {
+              "type": "string",
+              "description": "Name of the office head"
+            },
+            "contact": {
+              "type": ["string", "null"],
+              "description": "Contact phone number"
+            },
+            "email": {
+              "type": ["string", "null"],
+              "description": "Email address"
+            }
+          },
+          "additionalProperties": false
+        },
+        "minItems": 1
+      }
+    },
+    "additionalProperties": false
+  },
+  "minItems": 1
+}
