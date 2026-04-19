@@ -1,4 +1,9 @@
-import { Building2Icon, MailIcon, PhoneIcon } from 'lucide-react';
+import {
+  Building2Icon,
+  MailIcon,
+  PhoneIcon,
+  ExternalLinkIcon,
+} from 'lucide-react';
 import { useParams } from 'react-router-dom';
 import {
   Card,
@@ -113,6 +118,7 @@ export default function CityDepartmentsCategory() {
                   className='text-blue-600 underline'
                 >
                   City Government Website
+                  <ExternalLinkIcon className='h-3 w-3 inline-block ml-1 mb-0.75' />
                 </a>
               </span>
               <span>Coverage: Offices per category</span>
