@@ -1,4 +1,4 @@
-import { Building2Icon, ExternalLinkIcon, UsersIcon } from 'lucide-react';
+import { Building2Icon, ExternalLinkIcon, ScrollTextIcon } from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -65,7 +65,7 @@ export default function CityOfficialsIndex() {
         <Card variant='featured' className='border-t-4 border-primary-500'>
           <CardContent>
             <div className='flex items-center gap-2 mb-4'>
-              <UsersIcon className='h-5 w-5 text-primary-600' />
+              <ScrollTextIcon className='h-5 w-5 text-primary-600' />
               <CardTitle level='h2'>Legislative Officials</CardTitle>
             </div>
 
