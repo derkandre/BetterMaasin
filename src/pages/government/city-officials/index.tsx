@@ -1,4 +1,4 @@
-import { Building2Icon, UsersIcon } from 'lucide-react';
+import { Building2Icon, ExternalLinkIcon, UsersIcon } from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -87,6 +87,45 @@ export default function CityOfficialsIndex() {
           </CardContent>
         </Card>
       </CardGrid>
+
+      {/* Data Source Card */}
+      <div className='rounded-lg border border-yellow-100 bg-yellow-50/60 p-4 md:p-5'>
+        <div className='flex items-start gap-3'>
+          <div className='rounded-full bg-white p-2 border border-yellow-100'>
+            <Building2Icon className='h-4 w-4 text-yellow-700' />
+          </div>
+
+          <div className='min-w-0'>
+            <h2 className='text-sm font-semibold text-yellow-900'>
+              Data Source and Freshness
+            </h2>
+            <p className='mt-1 text-sm text-yellow-900/90 leading-relaxed'>
+              City officials listings are compiled from official Maasin City
+              Government records. Information may change without prior notice.
+            </p>
+
+            <div className='mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-yellow-800'>
+              <span>
+                <span>Source: </span>
+                <a
+                  href='https://maasincity.gov.ph/index.php/government/directory'
+                  className='text-blue-600 underline'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  City Government Website
+                  <ExternalLinkIcon
+                    className='h-3 w-3 inline-block ml-1 mb-0.75'
+                    aria-hidden='true'
+                  />
+                </a>
+              </span>
+              <span>Coverage: Executive and legislative officials</span>
+              <span>Last verified: April 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
