@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Maasin City Officials",
+  "description": "Elected and appointed officials of Maasin City government, organized by branch",
+  "type": "object",
+  "required": ["executive", "legislative"],
+  "properties": {
+    "executive": {
+      "type": "object",
+      "required": ["officials"],
+      "properties": {
+        "officials": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["role", "name"],
+            "properties": {
+              "role": {
+                "type": "string",
+                "description": "Position or role title"
+              },
+              "name": {
+                "type": "string",
+                "description": "Full name of the official"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "legislative": {
+      "type": "object",
+      "required": ["officials"],
+      "properties": {
+        "officials": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["role", "name"],
+            "properties": {
+              "role": {
+                "type": "string",
+                "description": "Position or role title"
+              },
+              "name": {
+                "type": "string",
+                "description": "Full name of the official"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
