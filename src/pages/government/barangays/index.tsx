@@ -1,18 +1,23 @@
-export default function BarangaysIndex() {
-  return (
-    <div className='space-y-4'>
-      <div>
-        <h1 className='text-3xl font-bold text-gray-900 mb-2'>Barangays</h1>
-        <p className='text-gray-800 max-w-2xl'>
-          This section will list the barangays of Maasin City with their local
-          officials and contact details.
-        </p>
-      </div>
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { barangays } from './data';
 
-      <div className='rounded-lg border border-dashed border-gray-300 bg-white p-6'>
-        <p className='text-gray-800'>
-          Placeholder page for barangay-level information.
-        </p>
+export default function BarangaysIndexRedirect() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (barangays.length > 0) {
+      navigate(
+        `/government/barangays/${encodeURIComponent(barangays[0].slug)}`
+      );
+    }
+  }, [navigate]);
+
+  return (
+    <div className='flex items-center justify-center h-64'>
+      <div className='text-center'>
+        <div className='animate-spin h-8 w-8 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4'></div>
+        <p className='text-gray-800'>Loading barangay directory...</p>
       </div>
     </div>
   );

@@ -69,6 +69,9 @@ import CityOfficialsIndex from './pages/government/city-officials/index';
 import CityDepartmentsLayout from './pages/government/city-departments/layout';
 import CityDepartmentsIndex from './pages/government/city-departments';
 import CityDepartmentsCategory from './pages/government/city-departments/[category]';
+import BarangaysLayout from './pages/government/barangays/layout';
+import BarangaysIndex from './pages/government/barangays/index';
+import BarangayDetail from './pages/government/barangays/[barangay]';
 
 // Search Page
 import SearchPage from './pages/Search';
@@ -197,6 +200,10 @@ function App() {
               >
                 <Route index element={<CityDepartmentsIndex />} />
                 <Route path=':category' element={<CityDepartmentsCategory />} />
+              </Route>
+              <Route path='barangays/*' element={<BarangaysLayout />}>
+                <Route index element={<BarangaysIndex />} />
+                <Route path=':barangay' element={<BarangayDetail />} />
               </Route>
 
               <Route path='executive' element={<ExecutiveLayout />}>
