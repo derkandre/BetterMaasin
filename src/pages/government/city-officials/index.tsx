@@ -1,4 +1,9 @@
-import { Building2Icon, ExternalLinkIcon, ScrollTextIcon } from 'lucide-react';
+import {
+  Building2Icon,
+  ExternalLinkIcon,
+  ScrollTextIcon,
+  ShieldAlertIcon,
+} from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -92,7 +97,7 @@ export default function CityOfficialsIndex() {
       <div className='rounded-lg border border-yellow-100 bg-yellow-50/60 p-4 md:p-5'>
         <div className='flex items-start gap-3'>
           <div className='rounded-full bg-white p-2 border border-yellow-100'>
-            <Building2Icon className='h-4 w-4 text-yellow-700' />
+            <ShieldAlertIcon className='h-4 w-4 text-yellow-700' />
           </div>
 
           <div className='min-w-0'>
@@ -100,8 +105,10 @@ export default function CityOfficialsIndex() {
               Data Source and Freshness
             </h2>
             <p className='mt-1 text-sm text-yellow-900/90 leading-relaxed'>
-              City officials listings are compiled from official Maasin City
-              Government records. Information may change without prior notice.
+              Information shown are sourced from official Maasin City Government
+              records and publicly published office directories. Information may
+              change without prior notice. Verify the information through the
+              source link or contact the relevant office.
             </p>
 
             <div className='mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-yellow-800'>
