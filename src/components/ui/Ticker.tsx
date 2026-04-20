@@ -170,7 +170,7 @@ const Ticker: FC = () => {
           </div>
 
           {/* Weather information */}
-          <div className='flex items-center space-x-6 pl-4 pr-4 border-l border-accent-500'>
+          <div className='flex items-center space-x-6 pl-4 pr-4 h-5 border-l border-accent-500'>
             {weatherLoading ? (
               <div className='flex items-center space-x-2'>
                 <LoaderIcon className='h-3 w-3 animate-spin text-accent-100' />
@@ -202,7 +202,7 @@ const Ticker: FC = () => {
           </div>
 
           {/* DateTime display */}
-          <div className='inline-flex items-center space-x-2 border-l border-accent-500 pl-4'>
+          <div className='inline-flex items-center space-x-2 h-5 border-l border-accent-500 pl-4'>
             <Calendar className='h-3.5 w-3.5 mb-0.5 hidden sm:inline' />
             <span className='text-xs text-accent-100 hidden sm:inline'>
               {now.toLocaleDateString(undefined, {
