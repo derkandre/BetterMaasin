@@ -101,6 +101,66 @@ const Hotlines: FC = () => {
       hotline.numbers.some(number => number.includes(searchTerm))
   );
 
+  const getPriorityLabel = (hotline: Hotline) => {
+    const text = (
+      hotline.name +
+      ' ' +
+      (hotline.category || '') +
+      hotline.description
+    ).toLowerCase();
+    if (/\b(police|pnp)\b/.test(text)) return 'Police';
+    if (/\b(fire|bfp)\b/.test(text)) return 'Fire';
+    if (/\b(medical|hospital)\b/.test(text)) return 'Medical';
+    if (/\b(disaster)\b/.test(text)) return 'Disaster';
+    if (/\b(national)\b/.test(text)) return '911';
+    return null;
+  };
+
+  const getPriorityClasses = (hotline: Hotline) => {
+    const label = getPriorityLabel(hotline);
+    if (!label) return { card: 'bg-white border-gray-200', badge: '' };
+
+    if (label === 'Police') {
+      return {
+        card: 'bg-blue-50 border-blue-200 border-l-4 hover:shadow-xl',
+        badge: 'bg-blue-600 text-white',
+      };
+    }
+
+    if (label === 'Fire') {
+      return {
+        card: 'bg-red-50 border-red-200 border-l-4 hover:shadow-xl',
+        badge: 'bg-red-600 text-white',
+      };
+    }
+
+    if (label === 'Medical') {
+      return {
+        card: 'bg-green-50 border-green-200 border-l-4 hover:shadow-xl',
+        badge: 'bg-green-600 text-white',
+      };
+    }
+
+    if (label === 'Disaster') {
+      return {
+        card: 'bg-yellow-50 border-yellow-200 border-l-4 hover:shadow-xl',
+        badge: 'bg-yellow-600 text-white',
+      };
+    }
+
+    if (label === '911') {
+      return {
+        card: 'bg-purple-50 border-purple-200 border-l-4 hover:shadow-xl',
+        badge: 'bg-purple-600 text-white',
+      };
+    }
+
+    return {
+      card: 'bg-green-50 border-green-200 border-l-4 hover:shadow-xl',
+      badge: 'bg-green-600 text-white',
+    };
+  };
+
   return (
     <div className='container mx-auto px-4 py-8'>
       <div className='text-center mb-8'>
@@ -148,10 +208,21 @@ const Hotlines: FC = () => {
           filteredHotlines.map((hotline, index) => (
             <div
               key={index}
-              className='bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow'
+              className={`relative rounded-lg shadow-md overflow-hidden border transition-shadow hover:shadow-lg ${getPriorityClasses(hotline).card}`}
             >
               <div className='p-5'>
-                <h3 className='font-bold text-lg mb-2'>{hotline.name}</h3>
+                <div className='flex items-start justify-between'>
+                  <h3 className='font-bold text-lg mb-2 pr-4 flex-1 break-words'>
+                    {hotline.name}
+                  </h3>
+                  {getPriorityLabel(hotline) && (
+                    <span
+                      className={`ml-3 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold shrink-0 ${getPriorityClasses(hotline).badge}`}
+                    >
+                      {getPriorityLabel(hotline)}
+                    </span>
+                  )}
+                </div>
                 {hotline.description && (
                   <p className='text-gray-800 text-sm mb-3'>
                     {hotline.description}
