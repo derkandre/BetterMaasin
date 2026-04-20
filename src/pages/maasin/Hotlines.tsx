@@ -1,5 +1,13 @@
 import { FC, useState } from 'react';
 import hotlinesData from '../../data/hotlines/hotlines.json';
+import { ExternalLinkIcon, ShieldAlertIcon } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '../../components/ui/Dialog';
 
 interface Hotline {
   name: string;
@@ -344,11 +352,91 @@ const Hotlines: FC = () => {
         )}
       </div>
 
-      <div className='mt-12 text-center'>
-        <p className='text-sm text-gray-800'>
-          These hotlines are collected from official government sources. If you
-          notice any outdated information, please report it.
-        </p>
+      {/* Data Source Card */}
+      <div className='rounded-lg border border-yellow-100 bg-yellow-50/60 p-4 md:p-5 mt-8'>
+        <div className='flex items-start gap-3'>
+          <div className='rounded-full bg-white p-2 border border-yellow-100'>
+            <ShieldAlertIcon className='h-4 w-4 text-yellow-700' />
+          </div>
+
+          <div className='min-w-0'>
+            <h2 className='text-sm font-semibold text-yellow-900'>
+              Data Source and Freshness
+            </h2>
+            <p className='mt-1 text-sm text-yellow-900/90 leading-relaxed'>
+              These hotlines are collected from official government sources and
+              various publicly available online sources. If you notice any
+              outdated information, please report it.
+            </p>
+
+            <div className='mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-yellow-800'>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className='text-blue-600 underline'>
+                    Sources
+                    <ExternalLinkIcon className='h-3.5 w-3.5 inline-block ml-1' />
+                  </button>
+                </DialogTrigger>
+                <DialogContent className='max-w-md'>
+                  <DialogHeader>
+                    <DialogTitle className='text-base'>
+                      Data Sources
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className='space-y-2 text-sm text-gray-800'>
+                    <a
+                      href='https://urlr.me/md4Zsb'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='flex items-center gap-2 hover:underline'
+                    >
+                      Maasin City Facebook Page (Web Archived)
+                      <ExternalLinkIcon className='h-3.5 w-3.5' />
+                    </a>
+                    <a
+                      href='https://primewatercorp.com/contact-us/'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='flex items-center gap-2 hover:underline'
+                    >
+                      Prime Water Contact
+                      <ExternalLinkIcon className='h-3.5 w-3.5' />
+                    </a>
+                    <a
+                      href='https://lto.gov.ph/directory/'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='flex items-center gap-2 hover:underline'
+                    >
+                      LTO Directory
+                      <ExternalLinkIcon className='h-3.5 w-3.5' />
+                    </a>
+                    <a
+                      href='https://www.soleco.com.ph/aboutus/contactus'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='flex items-center gap-2 hover:underline'
+                    >
+                      SOLECO Contact Us
+                      <ExternalLinkIcon className='h-3.5 w-3.5' />
+                    </a>
+                    <a
+                      href='https://healthspace.ph/facility/livinghope-hospital-inc-FCD01381'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='flex items-center gap-2 hover:underline'
+                    >
+                      HealthSpace
+                      <ExternalLinkIcon className='h-3.5 w-3.5' />
+                    </a>
+                  </div>
+                </DialogContent>
+              </Dialog>
+              <span>Coverage: Maasin local hotlines</span>
+              <span>Last verified: April 2026</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
