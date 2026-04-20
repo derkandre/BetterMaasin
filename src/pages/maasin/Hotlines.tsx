@@ -17,6 +17,9 @@ import {
   BusIcon,
   DropletIcon,
   HeartIcon,
+  CrossIcon,
+  FlameIcon,
+  PinIcon,
 } from 'lucide-react';
 
 const Hotlines: FC = () => {
@@ -161,6 +164,56 @@ const Hotlines: FC = () => {
     };
   };
 
+  const findHotlineByText = (list: Hotline[], text: string) =>
+    list.find(hotline => {
+      const haystack =
+        hotline.name +
+        ' ' +
+        (hotline.description || '') +
+        ' ' +
+        hotline.numbers.join(' ');
+      return haystack.toLowerCase().includes(text);
+    });
+
+  const pinnedHotlines = [
+    {
+      label: 'National',
+      icon: <AlertCircleIcon className='h-4 w-4 text-red-600' />,
+      hotline: findHotlineByText(
+        hotlinesData.emergencyHotlines as Hotline[],
+        '911'
+      ),
+    },
+    {
+      label: 'Police',
+      icon: <ShieldIcon className='h-4 w-4 text-blue-600' />,
+      hotline: findHotlineByText(
+        hotlinesData.securityHotlines as Hotline[],
+        'police'
+      ),
+    },
+    {
+      label: 'Fire',
+      icon: <FlameIcon className='h-4 w-4 text-orange-600' />,
+      hotline: findHotlineByText(
+        hotlinesData.disasterHotlines as Hotline[],
+        'fire'
+      ),
+    },
+    {
+      label: 'SOYMPH-ER',
+      icon: <CrossIcon className='h-4 w-4 text-emerald-600' />,
+      hotline: findHotlineByText(
+        hotlinesData.emergencyHotlines as Hotline[],
+        'soymph'
+      ),
+    },
+  ].filter(item => item.hotline) as {
+    label: string;
+    icon: JSX.Element;
+    hotline: Hotline;
+  }[];
+
   return (
     <div className='container mx-auto px-4 py-8'>
       <div className='text-center mb-8'>
@@ -201,6 +254,40 @@ const Hotlines: FC = () => {
           </button>
         ))}
       </div>
+
+      {/* Pinned Hotlines */}
+      {pinnedHotlines.length > 0 && (
+        <div className='mb-5 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5'>
+          <div className='mb-2 flex items-center gap-2 text-xs font-semibold text-gray-600 uppercase tracking-wide'>
+            <PinIcon className='h-3.5 w-3.5 text-gray-500' />
+            Pinned Hotlines
+          </div>
+          <div className='grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4'>
+            {pinnedHotlines.map(item => (
+              <div
+                key={item.label}
+                className='flex items-center gap-2 rounded-md border border-gray-200 bg-white px-2.5 py-2 text-xs sm:text-sm'
+              >
+                {item.icon}
+                <span className='font-semibold text-gray-900 whitespace-nowrap'>
+                  {item.label}
+                </span>
+                <a
+                  href={`tel:${item.hotline.numbers[0].replace(/\D/g, '')}`}
+                  className='min-w-0 flex-1 text-blue-700 hover:underline truncate'
+                >
+                  {item.hotline.numbers[0]}
+                </a>
+                {item.hotline.numbers.length > 1 && (
+                  <span className='text-[11px] text-gray-500 whitespace-nowrap'>
+                    +{item.hotline.numbers.length - 1} more
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Hotlines List */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
