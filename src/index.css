@@ -211,3 +211,33 @@
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
   background: var(--color-gray-400);
 }
+
+/* Emergency hotline animation */
+.animated-hotline {
+  background: linear-gradient(
+    130deg,
+    #b91c1c 25%,
+    #ff0000 40%,
+    #ffcaca 50%,
+    #ff0000 60%,
+    #b91c1c 75%
+  );
+  background-size: 400% auto;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+  animation: hotlinePulse 3.5s cubic-bezier(0.6, 0, 0.3, 1) infinite;
+}
+
+@keyframes hotlinePulse {
+  0% {
+    background-position: 100% center;
+  }
+  70% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
