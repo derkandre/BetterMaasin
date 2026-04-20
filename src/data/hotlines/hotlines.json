@@ -19,6 +19,12 @@
       "category": "Emergency",
       "numbers": ["0992-459-8559"],
       "description": "Salvacion Oppus Yñiguez Memorial Provincial Hospital Emergency Room."
+    },
+    {
+      "name": "Living Hope Hospital",
+      "category": "Emergency",
+      "numbers": ["0926-523-5956"],
+      "description": "Emergency medical services and hospital care."
     }
   ],
   "disasterHotlines": [
