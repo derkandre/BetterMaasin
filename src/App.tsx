@@ -132,6 +132,8 @@ function App() {
               <Route path='hotlines' element={<Hotlines />} />
             </Route>
 
+            <Route path='/hotlines' element={<Hotlines />} />
+
             {/* Data Routes */}
             <Route path='/data/weather' element={<WeatherPage />} />
             <Route path='/data/forex' element={<ForexPage />} />

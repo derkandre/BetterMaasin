@@ -163,8 +163,8 @@ const Navbar: FC = () => {
               {t('navbar.officialGovPh')}
             </a>
             <Link
-              to='/philippines/hotlines'
-              className='inline-flex items-center text-red-800 hover:text-primary-600 transition-colors whitespace-nowrap min-[340px]:max-[374px]:order-4'
+              to='/hotlines'
+              className='inline-flex items-center animated-hotline hover:opacity-90 transition-opacity whitespace-nowrap min-[340px]:max-[374px]:order-4'
             >
               {t('navbar.emergencyHotlines')}
             </Link>
